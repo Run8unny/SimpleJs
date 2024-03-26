@@ -1,6 +1,8 @@
 const addTodo = document.querySelector(".add");
 const todoList = document.querySelector(".todos");
 const search = document.querySelector(".search input");
+const waterBox = document.querySelector(".water__box");
+const moodBox = document.querySelector(".mood__box");
 
 const generateTemplate = todo => {
     const html =
@@ -40,7 +42,7 @@ const searchTodo = event => {
     filterTodo(term);
 }
 
-const handleClick = (e) => {
+const handleClick = e => {
     if (e.target.matches('.complete')) {
         e.target.closest("li").firstElementChild.classList.toggle('completed');
         e.target.classList.toggle('completed');
@@ -49,7 +51,22 @@ const handleClick = (e) => {
     }
 }
 
+const getWater = e => {
+    if (e.target.matches(".need_water")) {
+        e.target.closest("li").classList.toggle(".get_water");
+        e.target.classList.toggle("get_water");
+    }
+}
 
+const getFace = e => {
+    if (e.target.matches(".have_face")) {
+        e.target.closest("li").classList.toggle(".get_face");
+        e.target.classList.toggle("get_face");
+    }
+}
+
+moodBox.addEventListener("click", getFace);
+waterBox.addEventListener("click", getWater);
 search.addEventListener("keyup", searchTodo);
 todoList.addEventListener("click", handleClick);
 addTodo.addEventListener("submit", handleSubmit);

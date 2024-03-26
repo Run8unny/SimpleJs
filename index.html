@@ -14,10 +14,70 @@
 </head>
 <body>
 <div class="container">
-    <div class="grid__item1 text-center my-4">
-        <h1 class="mb-4">Todos</h1>
+    <div class="calendar__box grid__item">
+        <ul>
+            <li>mon</li>
+            <li>tue</li>
+            <li>wed</li>
+            <li>thurs</li>
+            <li>fri</li>
+            <li>sat</li>
+            <li>sun</li>
+        </ul>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+        </ul>
     </div>
-    <div class="text-center my-4 grid__item2">
+    <div class="calendar__months">
+        <ul>
+            <li>jan</li>
+            <li>feb</li>
+            <li>mar</li>
+            <li>apr</li>
+            <li>may</li>
+            <li>jun</li>
+            <li>jul</li>
+            <li>aug</li>
+            <li>sep</li>
+            <li>oct</li>
+            <li>nov</li>
+            <li>dec</li>
+        </ul>
+    </div>
+    <div class="grid__item1 text-center my-2">
+        <h1 class="mb-4">daily planner</h1>
+    </div>
+    <div class="text-center my-2 grid__item2">
         <form class="search">
             <input type="text" name="search" class="form-control m-auto" placeholder="search list"/>
         </form>
@@ -45,9 +105,23 @@
                     <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
                 </div>
             </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>go climbing</span>
+                <div class="tools">
+                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>morning routine</span>
+                <div class="tools">
+                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                </div>
+            </li>
         </ul>
 
-        <form class="add text-center my-4">
+        <form class="add text-center my-2">
             <p>New todo:</p>
             <div class="add-body">
                 <input type="text" name="add" class="form-control m-auto"/>
@@ -56,11 +130,48 @@
         </form>
     </main>
 
-    <div class="text-center my-4 grid__item4">
+    <div class="text-center my-2 grid__item4">
         <h1 class="mb-4">Get creative</h1>
     </div>
-    <div class="text-center my-4 grid__item5">
-        <canvas id="canvas" width="440" height="440"></canvas>
+    <div class="text-center my-2 grid__item5">
+        <canvas id="canvas" width="440" height="540"></canvas>
+    </div>
+    <ul class="text-center my-2 water__box grid__item6">
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+        <li><i class="fa-solid fa-glass-water need_water"></i></li>
+    </ul>
+    <ul class="text-center my-2 mood__box grid__item7">
+        <li><i class="have_face fa-solid fa-face-tired"></i></li>
+        <li><i class="have_face fa-solid fa-face-sad-tear"></i></li>
+        <li><i class="have_face fa-solid fa-face-rolling-eyes"></i></li>
+        <li><i class="have_face fa-solid fa-face-meh-blank"></i></li>
+        <li><i class="have_face fa-solid fa-face-smile"></i></li>
+        <li><i class="have_face fa-solid fa-face-smile-beam"></i></li>
+        <li><i class="have_face fa-solid fa-face-laugh-beam"></i></li>
+    </ul>
+    <div class="daytime my-2 text-center grid__item8">
+        <div>
+            <i class="fa-solid fa-mug-saucer"></i>
+            <p>morning</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-sun"></i>
+            <p>afternoon</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-cloud-moon"></i>
+            <p>evening</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-bed"></i>
+            <p>before bed</p>
+        </div>
     </div>
 </div>
 

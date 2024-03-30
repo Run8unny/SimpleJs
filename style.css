@@ -226,7 +226,7 @@ canvas {
 .grid__item8 div {
     width: 25%;
     border: double;
-    border-radius: 16px;
+    border-radius: 50%;
     padding: 20px;
 }
 

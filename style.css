@@ -21,7 +21,7 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: #B6BBC4;
+    background-color: black;
     font-family: monospace;
 }
 
@@ -69,7 +69,7 @@ input[type=text]:focus {
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-radius: 14px;
-    background: #F0ECE5;
+    background: rgb(229, 238, 254);
     list-style: none;
 }
 
@@ -127,7 +127,7 @@ canvas {
     border-radius: 16px;
     border: double;
     margin: 0 auto;
-    background-color: white;
+    background-color: #FDFFAE;
 }
 
 .grid__item {
@@ -202,7 +202,7 @@ canvas {
     grid-column: 2;
     grid-row: 6 / 7;
     border: 1px solid black;
-    background-color: rgba(185, 206, 246, 0.5);
+    background-color: #E2F4C5;
     font-size: 38px;
     align-self: center;
     padding: 20px 10px;
@@ -218,21 +218,21 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 80px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .grid__item8 div {
-    width: 25%;
-    border: double;
+    width: 18%;
+    border: 1px solid black;
     border-radius: 50%;
     padding: 20px;
 }
 
 .grid__item8 i {
     font-size: 50px;
-    color: cornflowerblue;
+    color: #FF71CD;
     padding: 20px;
 }
 
@@ -241,7 +241,7 @@ canvas {
 }
 
 .get_face {
-    color: #f77979;
+    color: #FF71CD;
 }
 
 @media (max-width: 815px) {

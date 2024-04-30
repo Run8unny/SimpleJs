@@ -28,6 +28,7 @@ body {
 
 .text__label {
     color: #F5F5F5;
+    margin-top: 50px;
 }
 
 .container {
@@ -173,14 +174,14 @@ canvas {
     display: inline-flex;
     gap: 9px;
     list-style: none;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 10px;
 }
 
 .calendar__months ul {
     display: grid;
     gap: 12px;
-    font-size: 15px;
+    font-size: 12px;
     list-style: none;
     padding-left: 5px;
     padding-top: 10px;

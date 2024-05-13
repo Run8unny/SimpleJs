@@ -6,6 +6,7 @@
 
 :root {
     --deep-dark: rgb(26, 26, 26);
+    --accent-color: #FDFFAE;
     --light-dark: #517fa4;
     --light-blue: rgb(210, 224, 237);
     --dark-blue: rgb(1, 61, 90);
@@ -79,7 +80,7 @@ a {
 }
 
 .menu__link:hover {
-    border-color: #fff;
+    border-color: var(--accent-color);
     color: #fff;
 }
 
@@ -148,7 +149,7 @@ a {
         .nav__menu {
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             gap: 1rem;
         }
 
@@ -294,6 +295,10 @@ a {
     color: #fff;
 }
 
+.interactive__title {
+    font-size: 1.2rem;
+}
+
 .water {
     background-color: rgba(255, 140, 0, 0.99);
     font-size: 40px;
@@ -306,7 +311,7 @@ a {
 }
 
 .mood__box {
-    text-align: right;
+    text-align: left;
     margin: 20px;
 }
 
@@ -314,11 +319,15 @@ a {
     background-color: #E2F4C5;
     font-size: 38px;
     align-self: center;
-    padding: 20px 10px;
+    padding: 20px 50px;
     margin: 0 auto;
     list-style: none;
     display: inline-flex;
     gap: 25px;
+}
+
+.boxes__container {
+    margin: 120px;
 }
 
 .boxes__toPlay {
@@ -363,6 +372,25 @@ a {
     height: 100px;
     background-color: blueviolet;
 }
+
+.box7 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.box8 {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.box9 {
+    width: 100px;
+    height: 100px;
+    background-color: olivedrab;
+}
+
 
 .get_water {
     color: cornflowerblue;
@@ -473,9 +501,9 @@ a {
 }
 
 .form__label {
-    font-weight: 900;
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 0.7rem;
     letter-spacing: 3px;
 }
 

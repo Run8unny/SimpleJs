@@ -13,165 +13,214 @@
     <title>Todo List</title>
 </head>
 <body>
-<div class="container">
-    <div class="calendar__box grid__item">
-        <ul>
-            <li>mon</li>
-            <li>tue</li>
-            <li>wed</li>
-            <li>thurs</li>
-            <li>fri</li>
-            <li>sat</li>
-            <li>sun</li>
-        </ul>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-        </ul>
-    </div>
-    <div class="calendar__months">
-        <ul>
-            <li>jan</li>
-            <li>feb</li>
-            <li>mar</li>
-            <li>apr</li>
-            <li>may</li>
-            <li>jun</li>
-            <li>jul</li>
-            <li>aug</li>
-            <li>sep</li>
-            <li>oct</li>
-            <li>nov</li>
-            <li>dec</li>
-        </ul>
-    </div>
-    <div class="grid__item1 text-center my-2">
-        <h1 class="mb-4">daily planner</h1>
-    </div>
-    <div class="text-center my-2 grid__item2">
-        <form class="search">
-            <input type="text" name="search" class="form-control m-auto" placeholder="search list"/>
-        </form>
-    </div>
-    <main class="grid__item3">
-        <ul class="list-group todos mx-auto ">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>create a website</span>
-                <div class="tools">
-                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
-                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
-                </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>learn with codewars</span>
-                <div class="tools">
-                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
-                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
-                </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>go for a walk</span>
-                <div class="tools">
-                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
-                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
-                </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>go climbing</span>
-                <div class="tools">
-                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
-                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
-                </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>morning routine</span>
-                <div class="tools">
-                    <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
-                    <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
-                </div>
-            </li>
-        </ul>
 
-        <form class="add text-center my-2">
-            <p class="text__label">New todo:</p>
-            <div class="add-body">
-                <input type="text" name="add" class="form-control m-auto"/>
-                <button class="btn add">add</button>
+<div class="website__container">
+
+    <header class="header">
+        <div class="header__container">
+
+            <nav class="header__menu">
+                <ul class="nav__menu">
+                    <li class="menu__list"><a class="menu__link" href="#Iam">My passion</a></li>
+                    <li class="menu__list"><a class="menu__link" href="#What">What's that</a></li>
+                    <li class="menu__list"><a class="menu__link" href="#canvas">Canvas</a></li>
+                    <li class="menu__list"><a class="menu__link" href="#todos">Todos</a></li>
+                    <li class="menu__list"><a class="menu__link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger__menu">
+                <strong>Menu</strong>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="/" class="logo  header__logo">experimental <span>Project</span></a>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="todo__container">
+
+            <section class="todoList" id="todos">
+                <div class="text-center my-2 todos__search">
+                    <form class="search">
+                        <input type="text" name="search" class="m-auto todos__input" placeholder="search list"/>
+                    </form>
+                </div>
+                <ul class="todos mx-auto todos__list">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>create a website</span>
+                        <div class="tools">
+                            <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                            <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <span>learn with codewars</span>
+                        <div class="tools">
+                            <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                            <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>go for a walk</span>
+                        <div class="tools">
+                            <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                            <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>go climbing</span>
+                        <div class="tools">
+                            <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                            <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>morning routine</span>
+                        <div class="tools">
+                            <button class="complete"><i class="fa-solid fa-circle-check complete"></i></button>
+                            <button class="delete"><i class="fa-solid fa-trash delete"></i></button>
+                        </div>
+                    </li>
+                </ul>
+                <form class="add text-center my-2 todos__newOne">
+                    <p class="text__label">Add something:</p>
+                    <div class="add-body">
+                        <input type="text" name="add" class="m-auto todos__input"/>
+                        <button class="btn add">add</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+        <section class="draw">
+            <div class="draw__container">
+                <div class="text-center my-2 header__two">
+                    <h1 class="mb-4 draw__title">Let's Draw</h1>
+                </div>
+                <div class="text-center my-2 canvas_box">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                    <input type="color" id="color"/>
+                    <button class="btn canvas__btn">Clear</button>
+                </div>
+
+
+                <div class="interactive__box">
+                    <div class="water__box">
+                        <h3>How Much Water have You Drink so Far?</h3>
+                        <ul class="text-center my-2  water">
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                            <li><i class="fa-solid fa-glass-water need_water"></i></li>
+                        </ul>
+                    </div>
+                    <div class="mood__box">
+                        <h3>What's your mood today?</h3>
+                        <ul class="text-center my-2  mood">
+                            <li><i class="have_face fa-solid fa-face-tired"></i></li>
+                            <li><i class="have_face fa-solid fa-face-sad-tear"></i></li>
+                            <li><i class="have_face fa-solid fa-face-rolling-eyes"></i></li>
+                            <li><i class="have_face fa-solid fa-face-meh-blank"></i></li>
+                            <li><i class="have_face fa-solid fa-face-smile"></i></li>
+                            <li><i class="have_face fa-solid fa-face-smile-beam"></i></li>
+                            <li><i class="have_face fa-solid fa-face-laugh-beam"></i></li>
+                        </ul>
+                    </div>
+                    <div class="my-2 text-center boxes__toPlay">
+                        <h3>Move these boxes please...</h3>
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                        <div class="box3"></div>
+                        <div class="box4"></div>
+                        <div class="box5"></div>
+                        <div class="box6"></div>
+                    </div>
+                </div>
+
             </div>
-        </form>
+        </section>
+
+
     </main>
 
-    <div class="text-center my-2 grid__item4">
-        <h1 class="mb-4">Get creative</h1>
-    </div>
-    <div class="text-center my-2 grid__item5">
-        <canvas id="canvas" width="440" height="540"></canvas>
-    </div>
-    <ul class="text-center my-2 water__box grid__item6">
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-        <li><i class="fa-solid fa-glass-water need_water"></i></li>
-    </ul>
-    <ul class="text-center my-2 mood__box grid__item7">
-        <li><i class="have_face fa-solid fa-face-tired"></i></li>
-        <li><i class="have_face fa-solid fa-face-sad-tear"></i></li>
-        <li><i class="have_face fa-solid fa-face-rolling-eyes"></i></li>
-        <li><i class="have_face fa-solid fa-face-meh-blank"></i></li>
-        <li><i class="have_face fa-solid fa-face-smile"></i></li>
-        <li><i class="have_face fa-solid fa-face-smile-beam"></i></li>
-        <li><i class="have_face fa-solid fa-face-laugh-beam"></i></li>
-    </ul>
-    <div class="daytime my-2 text-center grid__item8">
-        <div>
-            <i class="fa-solid fa-sun"></i>
-            <p>sun</p>
+    <section class="section__contact" id="contact">
+        <div class="contact__container">
+
+            <div class="contact__form  contact__form--left">
+                <h2 class="title form__title">
+                    Do You Want to Contact Me?
+                </h2>
+                <p class="text  form__text">Leave Your Email Address or Call Me!</p>
+                <div></div>
+                <div class="form__info__row form__info">
+                    <p class="info--mail">zaneta87@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact__form  contact__form--right">
+                <h2 class="text  form__text">Even though the form doesn't work for now, but it will be one day.</h2>
+                <form class="form">
+                    <div class="form__row">
+                        <label for="name" class="form__label">Name</label>
+                        <input class="form__input" type="text" required name="name" id="name">
+                    </div>
+
+                    <div class="form__row">
+                        <label for="email" class="form__label">Email</label>
+                        <input class="form__input" type="email" required name="email" id="email">
+                    </div>
+
+                    <div class="form__row form__row--checkbox">
+                        <div class="form__checkbox">
+                            <input id="regulation" type="checkbox">
+                            <label for="regulation" class="checkbox"></label>
+                            <label class="checkbox__text">
+                                I hereby give consent for my personal data included in my application to be
+                                processed for the purposes of the recruitment process under the European
+                                Parliament’s and
+                                Council of the European Union Regulation on the Protection of Natural Persons as of
+                                27 April
+                                2016, with regard to the processing of personal data and on the free movement of
+                                such data, and repealing Directive 95/46/EC (Data Protection Directive).
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form__row--button">
+                        <button class="btn  btn--form">Send</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
-        <div>
-            <i class="fa-solid fa-mug-saucer"></i>
-            <p>be now</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__info">
+                <a href="/" class="logo  footer__logo">
+                    experimental <span>Project</span>
+                </a>
+            </div>
+            <span class="text  footer__text">© zan, All Rights Reserved</span>
         </div>
-        <div>
-            <i class="fa-solid fa-bed"></i>
-            <p>sleep</p>
-        </div>
-    </div>
+    </footer>
+
 </div>
 
 <script src="script.js"></script>
+<script src="burgerMenu.js"></script>
 <script src="canvas.js"></script>
 </body>
 </html>

@@ -198,7 +198,7 @@ a {
 
 .todos__input {
     width: 100%;
-    color: #F5F5F5;
+    color: #000;
     border: none;
     background: rgba(255, 255, 255, 0.9);
     padding: 12px 20px;
@@ -303,7 +303,7 @@ a {
     background-color: rgba(255, 140, 0, 0.99);
     font-size: 40px;
     align-self: center;
-    padding: 20px 10px;
+    padding: 20px 50px;
     margin: 0 auto;
     list-style: none;
     display: inline-flex;

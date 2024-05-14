@@ -14,7 +14,7 @@ let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
 
-let d = 40;
+let d = 30;
 
 let color = "pink";
 let colorPal = document.getElementById("color");
@@ -85,11 +85,46 @@ function drawCircle(startX, startY, endX, endY, d, e) {
     setLastCoords(e);
     ctx.arc(startX, startY, d, 0, Math.PI * 2);
     ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.fillStyle = '#fff';
+    ctx.lineWidth = 3;
     ctx.stroke();
 }
 
 function clearDraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+const canvasTwo = document.getElementById("canvas2");
+const ctx2 = canvasTwo.getContext("2d");
+let width = canvasTwo.width / 2;
+let height = canvasTwo.height / 2;
+const ball = 30;
+let x = 1;
+let y = 1;
+
+function drawBall() {
+    ctx2.beginPath();
+    ctx2.arc(width, height, ball, 0, Math.PI * 2);
+    ctx2.fillStyle = "#000";
+    ctx2.fill();
+    ctx2.closePath();
+}
+
+
+function animation() {
+    ctx2.clearRect(0, 0, canvas.width, canvas.height);
+    // ctx2.translate(450, -0);
+    // ctx2.rotate(90);
+    // ctx2.strokeRect(60, 60, 250, 250);
+    // ctx2.strokeStyle = "#000";
+    drawBall()
+    if (width > canvasTwo.width - ball || width < ball) {
+        x *= -1;
+    }
+    if (height > canvasTwo.width - ball || height < ball) {
+        y *= -1;
+    }
+    width += x;
+    height += y;
+}
+
+setInterval(animation, 10);

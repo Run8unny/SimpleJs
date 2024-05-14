@@ -32,6 +32,7 @@ body {
 }
 
 .container {
+    margin-top: 50px;
     display: flex;
 }
 
@@ -438,7 +439,7 @@ a {
 }
 
 .contact__container {
-    padding: 30px 100px;
+    padding: 70px 100px;
     display: flex;
     justify-content: center;
     border-left: 1px solid white;

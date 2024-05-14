@@ -198,7 +198,7 @@ a {
 
 .todos__input {
     width: 100%;
-    color: #F5F5F5;
+    color: #000;
     border: none;
     background: rgba(255, 255, 255, 0.9);
     padding: 12px 20px;
@@ -303,7 +303,7 @@ a {
     background-color: rgba(255, 140, 0, 0.99);
     font-size: 40px;
     align-self: center;
-    padding: 20px 10px;
+    padding: 20px 50px;
     margin: 0 auto;
     list-style: none;
     display: inline-flex;
@@ -327,67 +327,71 @@ a {
 }
 
 .boxes__container {
-    margin: 120px;
+    display: flex;
+    justify-content: center;
 }
 
 .boxes__toPlay {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.dragInto {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    gap: 8px;
+    border: 1px solid #000;
+    margin: 20px;
+    padding: 30px;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
 }
 
 .box1 {
-    width: 100px;
-    height: 100px;
     background-color: cornflowerblue;
 }
 
 .box2 {
-    width: 100px;
-    height: 100px;
     background-color: red;
 }
 
 .box3 {
-    width: 100px;
-    height: 100px;
     background-color: yellow;
 }
 
 .box4 {
-    width: 100px;
-    height: 100px;
     background-color: pink;
 }
 
 .box5 {
-    width: 100px;
-    height: 100px;
     background-color: lightgray;
 }
 
 .box6 {
-    width: 100px;
-    height: 100px;
     background-color: blueviolet;
 }
 
 .box7 {
-    width: 100px;
-    height: 100px;
     background-color: black;
 }
 
 .box8 {
-    width: 100px;
-    height: 100px;
     background-color: white;
 }
 
 .box9 {
-    width: 100px;
-    height: 100px;
     background-color: olivedrab;
 }
 

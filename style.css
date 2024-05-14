@@ -323,7 +323,7 @@ a {
     background-color: #E2F4C5;
     font-size: 38px;
     align-self: center;
-    padding: 20px 50px;
+    padding: 20px 95px;
     margin: 0 auto;
     list-style: none;
     display: inline-flex;
@@ -358,7 +358,7 @@ a {
     min-height: 400px;
     gap: 10px;
     margin: 20px;
-    border: 1px solid #000;
+    border: 1px solid darkgrey;
     padding: 30px;
 }
 
@@ -457,6 +457,13 @@ a {
 .form {
     display: flex;
     flex-direction: column;
+}
+
+.image__contact {
+    width: 400px;
+    height: 350px;
+    margin: 50px 5px;
+    background-color: #fff;
 }
 
 .form__title {

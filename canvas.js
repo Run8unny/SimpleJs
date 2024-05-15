@@ -107,8 +107,13 @@ function drawBall() {
     ctx2.fillStyle = "#000";
     ctx2.fill();
     ctx2.closePath();
-}
+    ctx2.beginPath();
+    ctx2.arc(70, height, 50, 0, Math.PI * 2);
+    ctx2.fillStyle = "#000";
+    ctx2.fill();
+    ctx2.closePath();
 
+}
 
 function animation() {
     ctx2.clearRect(0, 0, canvas.width, canvas.height);
@@ -123,8 +128,11 @@ function animation() {
     if (height > canvasTwo.width - ball || height < ball) {
         y *= -1;
     }
+
     width += x;
     height += y;
+
 }
+
 
 setInterval(animation, 10);

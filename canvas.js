@@ -108,7 +108,7 @@ function drawBall() {
     ctx2.fill();
     ctx2.closePath();
     ctx2.beginPath();
-    ctx2.arc(70, height, 50, 0, Math.PI * 2);
+    ctx2.arc(70, height, ball, 0, Math.PI * 2);
     ctx2.fillStyle = "#000";
     ctx2.fill();
     ctx2.closePath();

@@ -146,4 +146,8 @@ function animateBox() {
     intervalAngle += 2;
 }
 
-setInterval(animateBox, 50);
+const intervalId = setInterval(animateBox, 50);
+
+boxToAnimate.addEventListener('click', () => {
+    clearInterval(intervalId);
+})

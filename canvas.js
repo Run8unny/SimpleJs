@@ -136,3 +136,14 @@ function animation() {
 
 
 setInterval(animation, 10);
+
+const boxToAnimate = document.querySelector('#animation__box');
+
+let intervalAngle = 0;
+
+function animateBox() {
+    boxToAnimate.style.transform = "rotate(" + intervalAngle + "deg)";
+    intervalAngle += 2;
+}
+
+setInterval(animateBox, 50);

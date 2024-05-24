@@ -93,51 +93,62 @@ function clearDraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+const boxToAnimate = document.querySelector('#animation__box');
 const canvasTwo = document.getElementById("canvas2");
 const ctx2 = canvasTwo.getContext("2d");
-let width = canvasTwo.width / 2;
-let height = canvasTwo.height / 2;
-const ball = 30;
-let x = 1;
-let y = 1;
+const ball = 20;
+// let x = 1;
+// let y = 1;
 
-function drawBall() {
-    ctx2.beginPath();
-    ctx2.arc(width, height, ball, 0, Math.PI * 2);
-    ctx2.fillStyle = "#000";
+// function drawBall() {
+//     ctx2.beginPath();
+//     ctx2.arc(width, height, ball, 0, Math.PI * 2);
+//     ctx2.fillStyle = "#000";
+//     ctx2.fill();
+//     ctx2.closePath();
+//     ctx2.beginPath();
+//     ctx2.arc(70, height, ball, 0, Math.PI * 2);
+//     ctx2.fillStyle = "#000";
+//     ctx2.fill();
+//     ctx2.closePath();
+//
+// }
+//
+// function animation() {
+//     ctx2.clearRect(0, 0, canvas.width, canvas.height);
+//     // ctx2.beginPath()
+//     // ctx2.fillStyle = 'rgba(0, 0, 0, 0.6)';
+//     // ctx2.moveTo(100, 100);
+//     // ctx2.lineTo(200, 200);
+//     // ctx2.lineTo(80, 350);
+//     // ctx2.fill();
+//     // ctx2.translate(450, -0);
+//     // ctx2.rotate(90);
+//     // ctx2.strokeRect(60, 60, 250, 250);
+//     // ctx2.strokeStyle = "#000";
+//     drawBall()
+//     if (width > canvasTwo.width - ball || width < ball) {
+//         x *= -1;
+//     }
+//     if (height > canvasTwo.width - ball || height < ball) {
+//         y *= -1;
+//     }
+//
+//     width += x;
+//     height += y;
+//
+// }
+//
+// setInterval(animation, 10);
+
+canvasTwo.addEventListener('click', (e) => {
+    let widthRandom = Math.floor(Math.random() * canvasTwo.width);
+    let heightRandom = Math.floor(Math.random() * canvasTwo.height);
+    ctx2.arc(widthRandom, heightRandom, ball, 0, Math.PI * 2);
+    ctx2.style = 'black'
     ctx2.fill();
-    ctx2.closePath();
-    ctx2.beginPath();
-    ctx2.arc(70, height, ball, 0, Math.PI * 2);
-    ctx2.fillStyle = "#000";
-    ctx2.fill();
-    ctx2.closePath();
+});
 
-}
-
-function animation() {
-    ctx2.clearRect(0, 0, canvas.width, canvas.height);
-    // ctx2.translate(450, -0);
-    // ctx2.rotate(90);
-    // ctx2.strokeRect(60, 60, 250, 250);
-    // ctx2.strokeStyle = "#000";
-    drawBall()
-    if (width > canvasTwo.width - ball || width < ball) {
-        x *= -1;
-    }
-    if (height > canvasTwo.width - ball || height < ball) {
-        y *= -1;
-    }
-
-    width += x;
-    height += y;
-
-}
-
-
-setInterval(animation, 10);
-
-const boxToAnimate = document.querySelector('#animation__box');
 
 let intervalAngle = 0;
 
@@ -146,8 +157,8 @@ function animateBox() {
     intervalAngle += 2;
 }
 
-const intervalId = setInterval(animateBox, 50);
-
 boxToAnimate.addEventListener('click', () => {
     clearInterval(intervalId);
 })
+
+const intervalId = setInterval(animateBox, 50);

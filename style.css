@@ -424,11 +424,12 @@ a {
 }
 
 .image__contact {
-    width: 220px;
-    height: 220px;
-    margin: 150px;
-    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
+
 
 .form__title {
     line-height: 3rem;

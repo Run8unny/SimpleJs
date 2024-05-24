@@ -426,10 +426,9 @@ a {
 .image__contact {
     width: 300px;
     height: 300px;
-    margin: 50px;
+    margin: 80px;
     background-color: rgba(255, 255, 255, 0.6);
 }
-
 
 .form__title {
     line-height: 3rem;

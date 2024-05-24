@@ -96,69 +96,64 @@ function clearDraw() {
 const boxToAnimate = document.querySelector('#animation__box');
 const canvasTwo = document.getElementById("canvas2");
 const ctx2 = canvasTwo.getContext("2d");
-const ball = 20;
-// let x = 1;
-// let y = 1;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const balls = [];
 
-// function drawBall() {
-//     ctx2.beginPath();
-//     ctx2.arc(width, height, ball, 0, Math.PI * 2);
-//     ctx2.fillStyle = "#000";
-//     ctx2.fill();
-//     ctx2.closePath();
-//     ctx2.beginPath();
-//     ctx2.arc(70, height, ball, 0, Math.PI * 2);
-//     ctx2.fillStyle = "#000";
-//     ctx2.fill();
-//     ctx2.closePath();
-//
-// }
-//
-// function animation() {
-//     ctx2.clearRect(0, 0, canvas.width, canvas.height);
-//     // ctx2.beginPath()
-//     // ctx2.fillStyle = 'rgba(0, 0, 0, 0.6)';
-//     // ctx2.moveTo(100, 100);
-//     // ctx2.lineTo(200, 200);
-//     // ctx2.lineTo(80, 350);
-//     // ctx2.fill();
-//     // ctx2.translate(450, -0);
-//     // ctx2.rotate(90);
-//     // ctx2.strokeRect(60, 60, 250, 250);
-//     // ctx2.strokeStyle = "#000";
-//     drawBall()
-//     if (width > canvasTwo.width - ball || width < ball) {
-//         x *= -1;
-//     }
-//     if (height > canvasTwo.width - ball || height < ball) {
-//         y *= -1;
-//     }
-//
-//     width += x;
-//     height += y;
-//
-// }
-//
-// setInterval(animation, 10);
+class Ball {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.xVel = (Math.random() - 0.5) * 10;
+        this.yVel = (Math.random() - 0.5) * 10;
+        this.size = Math.random() * 30 + 10;
+        this.color = Ball.getRandomColor();
+    }
 
-canvasTwo.addEventListener('click', (e) => {
-    let widthRandom = Math.floor(Math.random() * canvasTwo.width);
-    let heightRandom = Math.floor(Math.random() * canvasTwo.height);
-    ctx2.arc(widthRandom, heightRandom, ball, 0, Math.PI * 2);
-    ctx2.style = 'black'
-    ctx2.fill();
-});
+    static getRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
 
+        return `rgb(${r}, ${b},${g})`;
+    }
 
-let intervalAngle = 0;
+    draw() {
+        ctx2.beginPath();
+        ctx2.fillStyle = this.color;
+        ctx2.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx2.fill();
+    }
 
-function animateBox() {
-    boxToAnimate.style.transform = "rotate(" + intervalAngle + "deg)";
-    intervalAngle += 2;
+    update() {
+        //   Check if it's about to hit the canvas boundary
+        if (this.x + this.size >= canvas.width || this.x - this.size <= 0) {
+            this.xVel = -this.xVel;
+        }
+        if (this.y + this.size >= canvas.height || this.y - this.size <= 0) {
+            this.yVel = -this.yVel;
+        }
+        this.x += this.xVel;
+        this.y += this.yVel;
+
+        if (this.y + this.size < canvas.height) {
+            this.yVel += 0.3;
+        }
+    }
 }
 
-boxToAnimate.addEventListener('click', () => {
-    clearInterval(intervalId);
-})
+function loop() {
+    ctx2.fillStyle = "white";
+    ctx2.fillRect(0, 0, canvas.width, canvas.height);
+    for (let ball of balls) {
+        ball.update();
+        ball.draw();
+    }
+    requestAnimationFrame(loop);
+}
 
-const intervalId = setInterval(animateBox, 50);
+loop();
+canvasTwo.addEventListener("click", (e) => {
+    const ball = new Ball(e.clientX, e.clientY);
+    balls.push(ball);
+});

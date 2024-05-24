@@ -85,7 +85,7 @@ function drawCircle(startX, startY, endX, endY, d, e) {
     setLastCoords(e);
     ctx.arc(startX, startY, d, 0, Math.PI * 2);
     ctx.strokeStyle = color;
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 5;
     ctx.stroke();
 }
 
@@ -93,11 +93,8 @@ function clearDraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-const boxToAnimate = document.querySelector('#animation__box');
 const canvasTwo = document.getElementById("canvas2");
 const ctx2 = canvasTwo.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 const balls = [];
 
 class Ball {
@@ -136,9 +133,9 @@ class Ball {
         this.x += this.xVel;
         this.y += this.yVel;
 
-        if (this.y + this.size < canvas.height) {
-            this.yVel += 0.3;
-        }
+        // if (this.y + this.size < canvas.height) {
+        //     this.yVel += 0.3;
+        // }
     }
 }
 
@@ -157,3 +154,4 @@ canvasTwo.addEventListener("click", (e) => {
     const ball = new Ball(e.clientX, e.clientY);
     balls.push(ball);
 });
+

@@ -3,6 +3,20 @@ const todoList = document.querySelector(".todos");
 const search = document.querySelector(".search input");
 const waterBox = document.querySelector(".water__box");
 const moodBox = document.querySelector(".mood__box");
+const mouse = document.querySelector('#circle__mouse');
+const mouseTwo = document.querySelector('#other__mouse');
+
+
+const moveCursor = (e) => {
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+
+    mouse.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    mouseTwo.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+}
+
+window.addEventListener('mousemove', moveCursor)
 
 const generateTemplate = todo => {
     const html =

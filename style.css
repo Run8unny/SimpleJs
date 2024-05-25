@@ -25,10 +25,25 @@ body {
     justify-content: center;
     background-color: #F5F5F5;
     font-family: monospace;
+    cursor: crosshair;
 }
 
 .website__container {
     margin: 0 auto;
+}
+
+#circle__mouse {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(255, 192, 203, 0.9);
+    border-radius: 50%;
+}
+
+#other__mouse {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(253, 255, 174, 0.9);
+    border-radius: 50%;
 }
 
 .container {
@@ -324,7 +339,7 @@ a {
     background-color: #E2F4C5;
     font-size: 38px;
     align-self: center;
-    padding: 20px 95px;
+    padding: 20px 100px;
     margin: 0 auto;
     list-style: none;
     display: inline-flex;

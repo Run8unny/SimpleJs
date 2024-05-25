@@ -1,5 +1,7 @@
 const firstDiv = document.querySelector('.dragInto');
 const secondDiv = document.querySelector('.boxes__toPlay');
+let intervalAngle = 0;
+
 
 let itemHolder;
 const colors = [
@@ -17,10 +19,18 @@ for (let color of colors) {
 
 const boxes = document.querySelectorAll('.box');
 
+function animateBox(el) {
+    el.style.transform = "rotate(" + intervalAngle + "deg)";
+    intervalAngle += 10;
+}
+
 boxes.forEach(box => {
     box.addEventListener("dragstart", (e) => {
         itemHolder = e.target;
     });
+    box.addEventListener("click", (e) => {
+        animateBox(e.target)
+    })
 });
 
 firstDiv.addEventListener("dragover", (e) => {
@@ -38,3 +48,9 @@ secondDiv.addEventListener("dragover", (e) => {
 secondDiv.addEventListener("drop", (e) => {
     secondDiv.prepend(itemHolder);
 });
+
+
+
+
+
+

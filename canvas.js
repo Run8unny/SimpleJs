@@ -69,15 +69,15 @@ function setLastCoordsTouch(touch) {
     lastY = clientY - top;
 }
 
-function drawLine(startX, startY, endX, endY) {
-    ctx.beginPath();
-    ctx.moveTo(startX, startY);
-    ctx.lineTo(endX, endY);
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 7;
-    ctx.lineCap = 'round';
-    ctx.stroke();
-}
+// function drawLine(startX, startY, endX, endY) {
+//     ctx.beginPath();
+//     ctx.moveTo(startX, startY);
+//     ctx.lineTo(endX, endY);
+//     ctx.strokeStyle = color;
+//     ctx.lineWidth = 7;
+//     ctx.lineCap = 'round';
+//     ctx.stroke();
+// }
 
 function drawCircle(startX, startY, endX, endY, d, e) {
     ctx.beginPath()

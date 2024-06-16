@@ -6,7 +6,7 @@ let intervalAngle = 0;
 let itemHolder;
 const colors = [
     'red', 'pink', 'black', 'olivedrab', 'white', 'lightgray', 'indigo', 'violet', 'teal', 'lightgray', 'pink',
-    'red', 'pink', 'black', 'olivedrab', 'white', 'lightgray', 'indigo', 'violet', 'teal', 'black',
+    'red', 'pink', 'black', 'violet', 'white', 'lightgray', 'indigo', 'olivedrab', 'teal', 'black',
 ];
 
 for (let color of colors) {
